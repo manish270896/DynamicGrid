@@ -35,6 +35,12 @@ function App() {
     {make: "Porsche", model: "Boxter", price: 72000}
 ];
 
+const columns2 = [
+  { headerName: "Id", field: "make", filter: "agTextColumnFilter" },
+  { headerName: "Name", field: "model" },
+  { headerName: "Age", field: "price", filter: "agTextColumnFilter" },
+]
+
   return (
     <div className="App">
       
@@ -51,6 +57,8 @@ function App() {
         />
 
       </div> */}
+      <Grid rowData = {rowData}
+                columns = {columns2}></Grid>
       <div className="ag-theme-alpine" style={{height: 400, width: 600}}>
         <AgGridReact
             rowData={rowData}
